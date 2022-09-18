@@ -2927,6 +2927,7 @@ static void commit_charge(struct page *page, struct mem_cgroup *memcg)
 	 * - LRU isolation
 	 * - lock_page_memcg()
 	 * - exclusive reference
+	 * - mem_cgroup_trylock_pages()
 	 */
 	page->mem_cgroup = memcg;
 }
