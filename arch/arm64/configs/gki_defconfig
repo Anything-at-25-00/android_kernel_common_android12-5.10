@@ -1,4 +1,4 @@
-CONFIG_LOCALVERSION="-Mahiru-v5.1-Rose-MillenniumTeam"
+CONFIG_LOCALVERSION="-Mahiru-v5.1-Rose-VNL-MillenniumTeam"
 # CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_AUDIT=y
 CONFIG_NO_HZ=y
