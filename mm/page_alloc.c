@@ -339,7 +339,7 @@ compound_page_dtor * const compound_page_dtors[NR_COMPOUND_DTORS] = {
 int min_free_kbytes = 1024;
 int user_min_free_kbytes = -1;
 int watermark_boost_factor __read_mostly;
-int watermark_scale_factor = 10;
+int watermark_scale_factor = 35;
 
 /*
  * Extra memory for the system to try freeing. Used to temporarily
@@ -7211,6 +7211,7 @@ static void __meminit pgdat_init_internals(struct pglist_data *pgdat)
 	init_waitqueue_head(&pgdat->pfmemalloc_wait);
 
 	pgdat_page_ext_init(pgdat);
+	spin_lock_init(&pgdat->lru_lock);
 	lruvec_init(&pgdat->__lruvec);
 }
 
